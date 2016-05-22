@@ -22,22 +22,6 @@ nav div ul li a.active{
     background-color:grey;
 }
 
-/*.item-list{*/
-    /*background-color:lightgray;*/
-    /*margin:2px;*/
-
-
-/*}*/
-/*p.item-name{*/
-    /*font-size:18px;*/
-/*}*/
-/*p.item-description{*/
-    /*font-size:10px;*/
-/*}*/
-
-
-
-
 /*<!--media queries---->*/
     @media(max-width: 768px){
    .navbar-header{
