@@ -18,6 +18,10 @@ nav div ul li a.active{
 .item-list button{
 
 }
+.body{
+    background-color:grey;
+}
+
 /*.item-list{*/
     /*background-color:lightgray;*/
     /*margin:2px;*/
