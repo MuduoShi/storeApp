@@ -21,9 +21,8 @@ nav div ul li a.active{
 .body{
     background-color:grey;
 }
-/* this is from local-branch*/
-/*try to push to origin from local-branch directly*/
 
+/*this is from master branch changes*/
 /*<!--media queries---->*/
     @media(max-width: 768px){
    .navbar-header{
