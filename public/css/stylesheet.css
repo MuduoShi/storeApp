@@ -1,0 +1,45 @@
+.navbar-header{
+    display:none;
+}
+nav.navbar{
+    background: #000;
+}
+nav div ul li a{
+    color:darkgrey;
+}
+nav div ul li a.active{
+    color:#FFFFFF;
+}
+.item-list{
+    background-color:lightgrey;
+    margin:2px;
+    border-radius: 2px;
+}
+.item-list button{
+
+}
+/*.item-list{*/
+    /*background-color:lightgray;*/
+    /*margin:2px;*/
+
+
+/*}*/
+/*p.item-name{*/
+    /*font-size:18px;*/
+/*}*/
+/*p.item-description{*/
+    /*font-size:10px;*/
+/*}*/
+
+
+
+
+/*<!--media queries---->*/
+    @media(max-width: 768px){
+   .navbar-header{
+       display:block;
+   }
+        .icon-bar{
+            background-color:#ffffff;
+        }
+}

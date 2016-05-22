@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="storeApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <!---style sheets----->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+
+</head>
+<body>
+<header>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Store</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Catalog</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<!---content starts--->
+<div class="container">
+<div class="row">
+    <div class="left-nav">
+        <div class="col-sm-3">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Cras justo Odio</a></li>
+                <li ><a href="#">Daspibus ac facilisis</a></li>
+                <li ><a href="#">Morbi leo risus</a></li>
+                <li ><a href="#">Porta ac consectetur ac</a></li>
+                <li ><a href="#">Vestibulum</a></li>
+            </ul>
+        </div>
+    </div>
+    <!----left nav ends---->
+    <div class="col-sm-9" ng-controller="mainCtrl">
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Search</label>
+                <input placeholder="Search by item name" ng-model="searchContent">
+            </div><br/>
+            <div class="form-group">
+                <label>Add Item</label>
+                <input type="text" placeholder="Item Name" ng-model="newItem.name"/>
+                <input type="text" placeholder="Description" ng-model="newItem.description"/>
+                <input type="text" placeholder="Price" ng-model="newItem.price"/>
+                <button type="button" class="btn-default" ng-click="addItem()">Add</button>
+            </div>
+        </form>
+        <div class="item-list col-sm-12" ng-repeat="item in items|filter:searchContent">
+            <div class="col-sm-6">
+                <p class="item-name">{{item.name}}</p>
+                <p class="item-description">{{item.description}}</p>
+            </div>
+            <div class="col-sm-6">
+                <button class="btn btn-primary">{{item.price|currency}}</button>
+                <span class="glyphicon glyphicon-remove" ng-click="deleteItem($index)"></span>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+<!---script links--->
+<script src="js/angular.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/mainCtrl.js"></script>
+</body>
+</html>
