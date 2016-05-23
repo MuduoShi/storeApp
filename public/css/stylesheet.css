@@ -22,11 +22,7 @@ nav div ul li a.active{
     background-color:grey;
 }
 
-/* this is from master*/
-
-/*this is from local-branch  changes*/
-
-/*second before rebasing in local-branch*/
+/*changes from local-branch*/
 /*<!--media queries---->*/
     @media(max-width: 768px){
    .navbar-header{
